@@ -6,6 +6,8 @@ import requests
 import os
 
 app = Flask(__name__)
+from flask_cors import CORS
+CORS(app)  # разрешает всё со всех доменов
 
 # Папка для логов (Render монтирует /data только в платных планах, используем текущую)
 LOG_FILE = 'logs.txt'
